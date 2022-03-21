@@ -22,6 +22,6 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
-CMD ["serve"]
+CMD ["serve -p 5000"]
 
 EXPOSE 5000
