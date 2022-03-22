@@ -17,8 +17,10 @@ const scrollEvent = () => {
         const id = el.getAttribute('id');
 
         if (scrollpos >= (getYPosition(document.querySelector(`#${id}`)) - document.querySelector('.nav').offsetHeight)) {
-            document.querySelector(`a[href="#${id}"]`).classList.add('is-active');
-            document.querySelectorAll(`.nav a:not([href="#${id}"])`).forEach(e => e.classList.remove('is-active'));
+            if(document.querySelector(`a[href="#${id}"]`)){
+                document.querySelector(`a[href="#${id}"]`).classList.add('is-active');
+                document.querySelectorAll(`.nav a:not([href="#${id}"])`).forEach(e => e.classList.remove('is-active'));
+            }
         }
     });
 

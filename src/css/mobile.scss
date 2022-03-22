@@ -164,9 +164,15 @@ section:not(#home) {
     padding-bottom: 50px;
 }
 
-section h4 {
+section h3 {
     font-size: $size-1;
     margin-bottom: 50px;
+}
+
+section h4 {
+    font-size: $size-4;
+    margin-bottom: 30px;
+    margin-left: 10px;
 }
 
 section:nth-child(odd) {
@@ -287,21 +293,33 @@ section:nth-child(odd) {
 
 // ABOUT
 
-#about p {
-    margin: 0px 10px;
-    margin-bottom: 20px;
-    text-align: justify;
-}
-
-#about img.profil {
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-    border-radius: 2%;
-}
-
-#about p.name {
-    font-size: 13px;
-    text-align: center;
-}
+#about, #workshops, #courses{
+    p {
+        margin: 0px 10px;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+    img.profil {
+        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 2%;
+    }
+    p.name {
+        font-size: 13px;
+        text-align: center;
+    }
+    h4{
+        color: $primary;
+    }
+    .button{
+        margin-top: 1.5rem;
+    }
+} 
+ #courses{
+    p, h4{
+        margin-left: 0;
+        margin-right: 10px;
+    }
+ }
 
 //Legals page
 #legal {
