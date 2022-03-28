@@ -21,6 +21,14 @@ const scrollEvent = () => {
                 document.querySelector(`a[href="#${id}"]`).classList.add('is-active');
                 document.querySelectorAll(`.nav a:not([href="#${id}"])`).forEach(e => e.classList.remove('is-active'));
             }
+            let elButton = document.querySelector('#workshop-booking button')
+            if(elButton !== null){
+                if(id == "workshops"){
+                    elButton.classList.add('animate');
+                } else {
+                    elButton.classList.remove('animate')
+                }
+            }
         }
     });
 

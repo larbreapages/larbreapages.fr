@@ -374,3 +374,11 @@ section:nth-child(odd) {
 #mapid {
     height: 300px;
 }
+button {
+    transition: all .33s ease-in;
+    transition-delay: .15s;
+}
+button.animate {
+  box-shadow: 0 0.5em 0.5em -0.4em $primary;
+  transform: scale(104%) translateX(.25rem);
+}
