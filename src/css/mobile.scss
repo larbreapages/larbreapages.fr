@@ -205,6 +205,10 @@ section:nth-child(odd) {
     margin-bottom: 20px;
 }
 
+#services hr {
+    background-color: $primary;
+}
+
 // PORTFOLIO
 
 #portfolio .tabs {
