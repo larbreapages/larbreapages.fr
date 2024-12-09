@@ -171,7 +171,7 @@ section h3 {
 
 section h4 {
     font-size: $size-4;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     margin-left: 10px;
 }
 
@@ -386,7 +386,18 @@ button.animate {
   box-shadow: 0 0.5em 0.5em -0.4em $primary;
   transform: scale(104%) translateX(.25rem);
 }
+
+#workshop-booking {
+    margin-top: -15px;
+    margin-bottom: 1rem;
+}
+
 #ConstellationWidgetLinks .co-widget-p-link-gift-voucher {
     padding-left: 0;
     padding-right: 0;
+}
+
+.co-widget .co-widget-search button{
+    width: auto!important;
+    padding-inline: 8px!important;
 }
