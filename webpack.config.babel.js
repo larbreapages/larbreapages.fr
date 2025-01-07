@@ -45,6 +45,7 @@ const config = {
     plugins: [
         new HtmlWebpackPlugin({ filename: 'index.html', template: `${__dirname}/src/index.html`, hash: true }),
         new HtmlWebpackPlugin({ filename: 'legal.html', template: `${__dirname}/src/templates/legal.html`, hash: true }),
+        new HtmlWebpackPlugin({ filename: 'shop.html', template: `${__dirname}/src/templates/shop.html`, hash: true }),
         new ExtractTextPlugin({ filename: '[name].css', allChunks: false }),
         new ScriptExtHtmlWebpackPlugin({ defaultAttribute: 'async' }),
         new CopyWebpackPlugin([{ from: './static/' }]),

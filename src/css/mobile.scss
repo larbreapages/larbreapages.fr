@@ -10,6 +10,10 @@
 
 body{
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
 }
 
 ::selection {
@@ -326,6 +330,7 @@ section:nth-child(odd) {
  }
 
 //Legals page
+#shop,
 #legal {
     line-height: 1.75;
 
