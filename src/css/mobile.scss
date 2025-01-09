@@ -270,8 +270,13 @@ section:nth-child(odd) {
     margin-bottom: 1rem;
 }
 
-#contact .column i + * {
+#contact .column i + *:not(i) {
     margin-top: 0.75rem;
+}
+
+#contact .column .spacer{
+    display: inline-block;
+    width: 1.25rem;
 }
 
 // TESTIMONIALS
