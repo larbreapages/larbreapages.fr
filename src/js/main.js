@@ -42,6 +42,8 @@ const scrollEvent = () => {
 window.addEventListener('scroll', scrollEvent);
 scrollEvent();
 
+
+
 // Tab
 const selectTab = (tab) => {
     document.querySelectorAll('#gallery div').forEach(el => el.classList.add('hide'));
@@ -61,6 +63,35 @@ window.onload = () => {
     for (let i = 0; i < defer.length; i += 1) {
         if (defer[i].getAttribute('data-src')) {
             defer[i].setAttribute('src', defer[i].getAttribute('data-src'));
+        }
+    }
+
+    //show popin on mouseout.
+
+    if (document.querySelector('#mc_embed_shell')) {
+        const mcFormShell = document.querySelector('#mc_embed_shell')
+        const mcFormWrapper = mcFormShell.querySelector('#mc_embed_signup')
+        const exitBtn = document.createElement('button')
+        exitBtn.type = "button"
+        exitBtn.textContent = "X"
+        exitBtn.classList.add('mc-form-exit')
+
+        mcFormWrapper.appendChild(exitBtn)
+        const mcForm = mcFormShell.querySelector('#mc-embedded-subscribe-form')
+
+        document.documentElement.addEventListener('mouseleave', () => {
+            if (mcFormShell.classList.contains('shown')) {
+                return
+            }
+            mcFormShell.classList.add('shown');
+        })
+        document.body.addEventListener('keyup', (e) => {
+            if (e.key === "Escape") {
+                mcFormShell.classList.remove('shown')
+            }
+        })
+        exitBtn.onclick = () => {
+            mcFormShell.classList.remove('shown')
         }
     }
 };
