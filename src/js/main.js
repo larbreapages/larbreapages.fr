@@ -67,7 +67,7 @@ window.onload = () => {
     }
 
     //show popin on mouseout.
-
+    let manuallyClosed = false
     if (document.querySelector('#mc_embed_shell')) {
         const mcFormShell = document.querySelector('#mc_embed_shell')
         const mcFormWrapper = mcFormShell.querySelector('#mc_embed_signup')
@@ -80,7 +80,7 @@ window.onload = () => {
         const mcForm = mcFormShell.querySelector('#mc-embedded-subscribe-form')
 
         document.documentElement.addEventListener('mouseleave', () => {
-            if (mcFormShell.classList.contains('shown')) {
+            if (manuallyClosed || mcFormShell.classList.contains('shown')) {
                 return
             }
             mcFormShell.classList.add('shown');
@@ -88,10 +88,12 @@ window.onload = () => {
         document.body.addEventListener('keyup', (e) => {
             if (e.key === "Escape") {
                 mcFormShell.classList.remove('shown')
+                manuallyClosed = true
             }
         })
         exitBtn.onclick = () => {
             mcFormShell.classList.remove('shown')
+            manuallyClosed = true
         }
     }
 };
