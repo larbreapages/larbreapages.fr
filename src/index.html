@@ -544,23 +544,60 @@
             <div id="mapid"></div>
             <div class="columns">
                 <div class="column">
-                    <i class="fa fa-map-marker fa-2x"></i>
-                    <p>35 Rue de la Commanderie Nancy 54000</p>
-                </div>
-                <div class="column">
                     <i class="fa fa-clock-o fa-2x"></i>
-                    <ul>
-                        <li>Du <strong>mardi</strong> au <strong>jeudi</strong> de <strong>14h à 17h30</strong></li>
-                        <li>Le <strong>vendredi</strong> de <strong>14h à 17h</strong></li>
-                        <li>Ou sur <strong><abbr title="rendez-vous">RDV</abbr></strong> du <strong>mardi au vendredi</strong> de <strong>9h30 à 17h</strong></li>
-                    </ul>
+                    <table class="horaires">
+                    <caption class="sr-only">Horaires</caption>
+                    <thead>
+                        <tr>
+                        <th scope="col"></th>
+                        <th scope="col">MATIN</th>
+                        <th scope="col">APRÈS-MIDI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">LUNDI</th>
+                        <td data-label="Journée" colspan="2">Télétravail (joignable 9h-12h30 / 14h-18h)</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">MARDI</th>
+                        <td data-label="Matin">Production (<abbr title="Rendez-vous">RDV</abbr>)</td>
+                        <td data-label="Après-midi">14h à 18h</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">MERCREDI</th>
+                        <td data-label="Matin">9h30 à 12h30</td>
+                        <td data-label="Après-midi">14h à 17h</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">JEUDI</th>
+                        <td data-label="Matin">Production (<abbr title="Rendez-vous">RDV</abbr>)</td>
+                        <td data-label="Après-midi">14h à 17h30</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">VENDREDI</th>
+                        <td data-label="Matin">Production (<abbr title="Rendez-vous">RDV</abbr>)</td>
+                        <td data-label="Après-midi">14h à 15h30</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">SAMEDI</th>
+                        <td colspan="2">Ouvert uniquement si stage de reliure</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                        <td colspan="3">
+                            <abbr title="Rendez-vous">RDV</abbr> = sur rendez-vous uniquement
+                        </td>
+                        </tr>
+                    </tfoot>
+                    </table>
                 </div>
-                <div class="column">
-                    <i class="fa fa-envelope fa-2x"></i><span class="spacer">&nbsp;</span><i class="fa fa-phone fa-2x"></i>
-                    <p><a href="mailto:contact@larbreapages.fr" class="bold">contact@larbreapages.fr</a></p>
-                    <p><a href="tel:0617483069" class="bold">06.17.48.30.69</a></p>
+                <div class="column info">
+                    <p><i class="fa fa-map-marker fa-2x"></i><br>35 Rue de la Commanderie Nancy 54000</p>
+                    <p><i class="fa fa-envelope fa-2x"></i><br><a href="mailto:contact@larbreapages.fr" class="bold">contact@larbreapages.fr</a></p>
+                    <p><i class="fa fa-phone fa-2x"></i><br><a href="tel:0617483069" class="bold">06.17.48.30.69</a></p>
                 </div>
-                
             </div>
         </div>
     </section>
