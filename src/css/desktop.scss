@@ -8,12 +8,14 @@
 
     // NAVBAR
 
-    .nav-item a:not(.button).is-tab:hover, a.nav-item:not(.button).is-tab:hover {
+    .nav-item a:not(.button).is-tab:hover,
+    a.nav-item:not(.button).is-tab:hover {
         border-bottom: 2px solid $primary;
         padding-bottom: calc(0.75rem - 2px);
     }
 
-    .nav-item a:not(.button).is-tab.is-active, a.nav-item:not(.button).is-tab.is-active {
+    .nav-item a:not(.button).is-tab.is-active,
+    a.nav-item:not(.button).is-tab.is-active {
         border-bottom: 2px solid $primary;
         padding-bottom: calc(0.75rem - 2px);
     }
@@ -67,7 +69,8 @@
 
     // GALLERY
 
-    #gallery div, #gallery img {
+    #gallery div,
+    #gallery img {
         height: 200px;
     }
 
@@ -78,12 +81,21 @@
 
     // CONTACT
     #contact .column {
-        margin-bottom:0;
+        margin-bottom: 0;
     }
 }
 
 @include widescreen {
-    .nav-left, .nav-right {
+    .nav-left,
+    .nav-right {
         flex-basis: auto;
+    }
+
+    #courses {
+        p,
+        h4 {
+            margin-left: 0;
+            margin-right: 10px;
+        }
     }
 }
