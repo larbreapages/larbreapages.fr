@@ -56,7 +56,21 @@
     .hero .hero-body a.button:first-child {
         margin-right: 10px;
     }
+    .columns:not(:last-child) {
+        margin-top: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
 
+    // Services
+
+    #services hr {
+        margin-bottom: 2.5rem;
+    }
+
+    #services .column.is-narrow{
+        flex: 0 0 215px;
+        max-width: 215px;
+    }
     // PORTFOLIO
 
     #portfolio .tabs {
@@ -80,22 +94,24 @@
     }
 
     // CONTACT
+    
     #contact .column {
         margin-bottom: 0;
+        flex: 1 1 auto;
+
+        &.info {
+              flex: 0 0 360px;
+        }
     }
 }
 
 @include widescreen {
+
+    .columns {
+        gap: .75rem;
+    }
     .nav-left,
     .nav-right {
         flex-basis: auto;
-    }
-
-    #courses {
-        p,
-        h4 {
-            margin-left: 0;
-            margin-right: 10px;
-        }
     }
 }
