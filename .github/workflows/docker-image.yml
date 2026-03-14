@@ -30,4 +30,4 @@ jobs:
 
       - name: Deploy on docker swarm
         run: |
-          curl -X POST https://portainer.larbreapages.fr/api/webhooks/ad391672-8619-4aed-a948-5f66d3d661b5
+          curl -X POST ${{ secrets.PORTAINER_WEBHOOK_URL }}
