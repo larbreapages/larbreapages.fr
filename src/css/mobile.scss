@@ -283,6 +283,13 @@ section:nth-child(odd) {
     margin-top: 1.5rem;
 }
 
+#contact .info-message {
+    .fa {
+        font-size: 1.5rem;
+        vertical-align: center;
+    }
+}
+
 #contact .column {
     margin-bottom: 1rem;
 
