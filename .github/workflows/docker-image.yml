@@ -19,14 +19,17 @@ jobs:
       - name: Log in to GitHub Container Registry
         run: echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
-      - name: Build the Docker image
-        run: docker build --build-arg PREFIX_PATHS=true -t ${{ env.IMAGE }}:${GITHUB_SHA::8} .
+      - name: Set short SHA
+        # create a reproducible SHORT_SHA for this run and export it to subsequent steps
+        run: echo "SHORT_SHA=${GITHUB_SHA::8}" >> $GITHUB_ENV
 
-      - name: Push the Docker image
+      - name: Build the Docker image (tagged with short SHA and latest)
+        run: docker build --build-arg PREFIX_PATHS=true -t $IMAGE:$SHORT_SHA -t $IMAGE:latest .
+
+      - name: Push the Docker image tags
         run: |
-          docker tag ${{ env.IMAGE }}:${GITHUB_SHA::8} ${{ env.IMAGE }}:latest
-          docker push ${{ env.IMAGE }}:${GITHUB_SHA::8}
-          docker push ${{ env.IMAGE }}:latest
+          docker push $IMAGE:$SHORT_SHA
+          docker push $IMAGE:latest
 
       - name: Deploy on docker swarm
         run: |
